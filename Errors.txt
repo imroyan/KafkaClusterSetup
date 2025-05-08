@@ -1,0 +1,17 @@
+2025-05-08 05:47:33,124 [myid:] - ERROR [main:o.a.z.s.q.QuorumPeerMain@99] - Invalid config, exiting abnormally
+org.apache.zookeeper.server.quorum.QuorumPeerConfig$ConfigException: 10.7.200.238:2888:3888;server.2=10.7.200.237:2888:3888;server.3=10.7.200.236:2888:3888 does not have the form server_config or server_config;client_config where server_config is the pipe separated list of host:port:port or host:port:port:type and client_config is port or host:port
+        at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.initializeWithAddressString(QuorumPeer.java:344)
+        at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.<init>(QuorumPeer.java:283)
+        at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.<init>(QuorumPeer.java:278)
+        at org.apache.zookeeper.server.quorum.flexible.QuorumMaj.<init>(QuorumMaj.java:96)
+        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.createQuorumVerifier(QuorumPeerConfig.java:654)
+        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.createQuorumVerifier(QuorumPeerConfig.java:640)
+        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parseDynamicConfig(QuorumPeerConfig.java:685)
+        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.setupQuorumPeerConfig(QuorumPeerConfig.java:659)
+        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parseProperties(QuorumPeerConfig.java:487)
+        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parse(QuorumPeerConfig.java:194)
+        at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:125)
+        at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:91)
+Invalid config, exiting abnormally
+2025-05-08 05:47:33,125 [myid:] - INFO  [main:o.a.z.a.ZKAuditProvider@42] - ZooKeeper audit is disabled.
+2025-05-08 05:47:33,127 [myid:] - ERROR [main:o.a.z.u.ServiceUtils@48] - Exiting JVM with code 2
